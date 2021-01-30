@@ -1,0 +1,79 @@
+:root {
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.125em 0.125em 0.25em rgba(0,0,0,0.15);
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-reg: 300;
+    --fw-semi-bold: 600;
+}
+
+body {
+    background-color: darkslategray;
+    color: white;
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-reg);
+}
+
+header {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-semi-bold);
+}
+
+.page-num {
+    font-size: x-large;
+    padding: .25em;
+    text-decoration: none;
+    color: cyan;
+}
+
+#top-btn {
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    z-index: 100;
+}
+
+.btn {
+    margin: .5em;
+    border: none;
+    padding: 0.25em 1.25em;
+    background-color: cadetblue;
+    color: white;
+    text-decoration: none;
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-reg);
+    transition: transform 200ms ease-in-out
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.text-box {
+    border: none;
+    width: 20%;
+    background-color: cadetblue;
+    color: white;
+    box-shadow: var(--bs);
+}
+
+.text-box {
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-reg);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-reg);
+    /*opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-reg);
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-reg);
+}
