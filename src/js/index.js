@@ -4,7 +4,7 @@ const topButton = document.getElementById('top-btn');
 const searchButton = document.getElementById('search-btn');
 const searchBox = document.getElementById('search-box');
 const limit = 10; //max # of results displayed
-let query = "https://api.fda.gov/drug/label.json?search="; //query link without search parameters added
+let query = "https://api.fda.gov/drug/Drugs@FDA.json?search="; //query link without search parameters added
 
 // search generic and brand names of drugs based on search
 searchButton.addEventListener('click', () => {
@@ -13,7 +13,7 @@ searchButton.addEventListener('click', () => {
         $("#result-head").html(`Results for "${searchText}"<br>`);
         searchText.replace(" ", "+");
         searchText = `"${searchText}"`;
-        searchText = query + `openfda.generic_name:${searchText}+openfda.brand_name:${searchText}+openfda.substance_name:${searchText}&limit=${limit}`;
+        searchText = query + `(openfda.generic_name:${searchText})+(openfda.brand_name:${searchText})+(openfda.substance_name:${searchText})&limit=${limit}`;
         console.log(`Query Constructed: ${searchText}`);
         let page = 1, index = -1;;
         let url = searchText;
