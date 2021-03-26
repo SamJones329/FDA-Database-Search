@@ -13,7 +13,7 @@ searchButton.addEventListener('click', () => {
         $("#result-head").html(`Results for "${searchText}"<br>`);
         searchText.replace(" ", "+");
         searchText = `"${searchText}"`;
-        searchText = query + `openfda.generic_name:"${searchText}"+openfda.brand_name:"${searchText}"+openfda.substance_name:"${searchText}"&limit=${limit}`;
+        searchText = query + `openfda.generic_name:${searchText}+openfda.brand_name:${searchText}+openfda.substance_name:${searchText}&limit=${limit}`;
         console.log(`Query Constructed: ${searchText}`);
         let page = 1, index = -1;;
         let url = searchText;
