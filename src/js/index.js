@@ -4,7 +4,7 @@ const topButton = document.getElementById('top-btn');
 const searchButton = document.getElementById('search-btn');
 const searchBox = document.getElementById('search-box');
 const limit = 10; //max # of results displayed
-let query = "https://api.fda.gov/drug/drugs@FDA.json?search="; //query link without search parameters added
+let query = "https://api.fda.gov/drug/label.json?search="; //query link without search parameters added
 
 // search generic and brand names of drugs based on search
 searchButton.addEventListener('click', () => {
